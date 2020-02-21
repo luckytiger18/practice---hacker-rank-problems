@@ -24,15 +24,17 @@ Rectangle.prototype.area = function() {
   
 }  
 // Create a Square class that inherits from Rectangle and implement its class constructor
+// made a child class which is related to the parent class
 class Square extends Rectangle {
-    area(){
-        super.area();
-        console.log(this.w)
+    constructor(w){
+        super(w, w)
     }
 }
 
 
 // }
 let area1 = new Rectangle(5,6);
-console.log(area1.area());
+let square = new Square(3);
+square.area();
+console.log(square.area());
 
